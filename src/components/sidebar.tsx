@@ -18,9 +18,8 @@ const Sidebar = () => {
         { label: 'Consultar Contratos', path: '/digitador/consultar-contratos', roles: ['digitador', 'user'] },
         { label: 'Registra Contratos', path: '/digitador/registrar-contratos', roles: ['digitador', 'user'] },
 
-        { label: 'Consulta Historicos', path: '/supervisor/consulta-historicos', roles: ['supervisor', 'user'] },
-        { label: 'Consulta Contratos', path: '/supervisor/consulta-contratos', roles: ['supervisor', 'user'] },
-        { label: 'Consulta Reportes', path: '/supervisor/consulta-reporte', roles: ['supervisor', 'user'] },
+        { label: 'Consulta Contratos', path: '/supervisor/consultar-contratos', roles: ['supervisor', 'user'] },
+        { label: 'Consulta Reportes', path: '/supervisor/consultar-reportes', roles: ['supervisor', 'user'] },
     ];
 
     const filteredMenuOptions = menuOptions.filter(
