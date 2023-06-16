@@ -9,18 +9,18 @@ const Sidebar = () => {
     const userRole = 'user';
 
     const menuOptions = [
-        { label: 'Gestionar Roles', path: 'admin/gestionar-roles', roles: ['admin', 'user'] },
-        { label: 'Gestionar Usuarios', path: 'admin/gestionar-usuarios', roles: ['admin', 'user'] },
-        { label: 'Gestionar Reportes', path: 'admin/gestionar-reportes', roles: ['admin', 'user'] },
-        { label: 'Gestionar Contratos', path: 'admin/gestionar-contratos', roles: ['admin', 'user'] },
-        { label: 'Gestionar Historicos', path: 'admin/gestionar-historicos', roles: ['admin', 'user'] },
+        { label: 'Gestionar Roles', path: '/admin/gestionar-roles', roles: ['admin', 'user'] },
+        { label: 'Gestionar Usuarios', path: '/admin/gestionar-usuarios', roles: ['admin', 'user'] },
+        { label: 'Gestionar Reportes', path: '/admin/gestionar-reportes', roles: ['admin', 'user'] },
+        { label: 'Gestionar Contratos', path: '/admin/gestionar-contratos', roles: ['admin', 'user'] },
+        { label: 'Gestionar Historicos', path: '/admin/gestionar-historicos', roles: ['admin', 'user'] },
 
-        { label: 'Consultar Contratos', path: 'digitador/consultar-contratos', roles: ['digitador', 'user'] },
-        { label: 'Registra Contratos', path: 'digitador/registrar-contratos', roles: ['digitador', 'user'] },
+        { label: 'Consultar Contratos', path: '/digitador/consultar-contratos', roles: ['digitador', 'user'] },
+        { label: 'Registra Contratos', path: '/digitador/registrar-contratos', roles: ['digitador', 'user'] },
 
-        { label: 'Consulta Historicos', path: 'supervisor/consulta-historicos', roles: ['supervisor', 'user'] },
-        { label: 'Consulta Contratos', path: 'supervisor/consulta-contratos', roles: ['supervisor', 'user'] },
-        { label: 'Consulta Reportes', path: 'supervisor/consulta-reporte', roles: ['supervisor', 'user'] },
+        { label: 'Consulta Historicos', path: '/supervisor/consulta-historicos', roles: ['supervisor', 'user'] },
+        { label: 'Consulta Contratos', path: '/supervisor/consulta-contratos', roles: ['supervisor', 'user'] },
+        { label: 'Consulta Reportes', path: '/supervisor/consulta-reporte', roles: ['supervisor', 'user'] },
     ];
 
     const filteredMenuOptions = menuOptions.filter(
