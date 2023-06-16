@@ -29,8 +29,8 @@
 
 /************** ( 'NAV SIMPLE' ) **************/
 .nav_side{
-    background: rgb(8,187,8);
-    background: linear-gradient(197deg, rgb(8, 187, 8) 0%, rgb(250, 248, 248) 100%);
+    background:rgb(0,136,0);
+    background: linear-gradient(197deg, rgb(8, 136, 8) 0%, rgb(250, 248, 248) 110%);
     border-radius: 0 15px 15px 0;
     width: 60px;
     height: 100vh;
@@ -141,7 +141,7 @@
 
 /* al dar hover en nav_icon_container tambien cambiar el color de letras de text_nav_icon */
 .nav_icon_container:hover .text_nav_icon{
-    color:rgb(8,187,8);
+    color:rgb(0,136,0);
     display: block;
     font-size: 15px;
     animation: opacityFrames 1s;
@@ -163,8 +163,8 @@
 /************** ( 'NAV BIG' ) **************/
 
 .nav_side_big{
-    background: rgb(8,187,8);
-    background: linear-gradient(197deg, rgb(8, 187, 8) 0%, rgb(250, 248, 248) 100%);
+    background:rgb(0,136,0);
+    background: linear-gradient(197deg, rgb(8, 136, 8) 0%, rgb(250, 248, 248) 110%);
     animation: navSideBig 1s;
     height: 100vh;
     display: flex;

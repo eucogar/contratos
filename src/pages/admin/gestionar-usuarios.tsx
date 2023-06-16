@@ -1,5 +1,4 @@
 import {DataTable} from "@/components/DataTable";
-import RegisterUser from "@/components/form/RegisterUser";
 
 export default function (){
 
@@ -101,7 +100,6 @@ export default function (){
                     selectRow={true}
                     handleSelectRow={(e)=>console.log(e)} />
             </div>
-            <RegisterUser/>
         </div>
 
     )
