@@ -2,6 +2,7 @@ import React, {useContext, useRef, useState} from 'react';
 import {useRouter} from "next/router";
 import '../styles/sidebar.css'
 import ArrowIconSVG from '../images/boton-abrir.svg';
+import logo from '../images/Escudo-Municipio.png';
 
 const Sidebar = () => {
     // Aquí puedes obtener el rol del usuario desde el contexto o de alguna otra manera
@@ -64,7 +65,7 @@ const Sidebar = () => {
                             height: '100%',
                             borderRadius: '50%',
                         }}
-                        src={"https://realtyleadership.com/wp-content/uploads/2017/06/Call-center.jpg"}
+                        src={logo.src}
                         alt="userPicture"
                     />
 
