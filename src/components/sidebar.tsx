@@ -9,11 +9,18 @@ const Sidebar = () => {
     const userRole = 'user';
 
     const menuOptions = [
-        { label: 'Gestionar Roles', path: 'gestionar-roles', roles: ['admin'] },
-        { label: 'Gestionar Usuarios', path: 'gestionar-usuarios', roles: ['admin'] },
+        { label: 'Gestionar Roles', path: 'gestionar-roles', roles: ['admin', 'user'] },
+        { label: 'Gestionar Usuarios', path: 'gestionar-usuarios', roles: ['admin', 'user'] },
         { label: 'Consultar Reportes', path: 'consultar-reportes', roles: ['admin', 'user'] },
         { label: 'Gestionar Contratos', path: 'gestionar-contratos', roles: ['admin', 'user'] },
-        { label: 'Gestionar Históricos', path: 'gestionar-historicos', roles: ['admin', 'user'] }
+        { label: 'Gestionar Historicos', path: 'gestionar-historicos', roles: ['admin', 'user'] },
+
+        { label: 'Consultar Contratos', path: 'consultar-contratos', roles: ['digitador', 'user'] },
+        { label: 'Registra Contratos', path: 'registra-contratos', roles: ['digitador', 'user'] },
+
+        { label: 'Consulta Historicos', path: 'consulta-historicos', roles: ['supervisor', 'user'] },
+        { label: 'Consulta Contratos', path: 'consulta-contratos', roles: ['supervisor', 'user'] },
+        { label: 'Consulta Reportes', path: 'consulta-reporte', roles: ['supervisor', 'user'] },
     ];
 
     const filteredMenuOptions = menuOptions.filter(
