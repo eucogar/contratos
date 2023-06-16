@@ -1,0 +1,266 @@
+/************** ( 'NAV SIMPLE ANIMATIONS' ) **************/
+/* animacion de aparicion */
+@keyframes opacityFrames {
+    0%   {opacity: 0;}
+    25%  {opacity: 0;}
+    50%  {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+/* from 40px to 200px */
+@keyframes navSideBig {
+    0%   {width: 40px;}
+    100% {width: 200px;}
+}
+
+@keyframes chevronSmallToBigToSmall {
+    0%   {width: 20px; height: 20px; background-color: none;}
+    50%  {width: 25px; height: 25px; background-color: rgba(255,255,255,0.5); border-radius: 50%; }
+    100% {width: 20px; height: 20px; background-color: none;}
+}
+
+
+/************** ( 'NAV BIG ANIMATIONS' ) **************/
+@keyframes imgSmallToBig {
+    0%   {width: 20px; height: 20px;}
+    100% {width: 40px; height: 40px;}
+}
+
+
+/************** ( 'NAV SIMPLE' ) **************/
+.nav_side{
+    background: rgb(120,0,150);
+    background: linear-gradient(197deg, rgba(120,0,150,1) 0%, rgba(254,0,130,1) 100%);
+    border-radius: 0 15px 15px 0;
+    width: 60px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    position: fixed;
+    z-index: 10;
+}
+
+.nav_upper{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav_arrow_icon{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.nav_arrow_icon_animate{
+    animation: chevronSmallToBigToSmall 1s;
+}
+
+.nav_avatar_container{
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.nav_icon_container{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* al poner hover mover a la derecha crecer con fondo blanco */
+.nav_icon_container:hover{
+    justify-content: left;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    border-radius: 0 5px 5px 0;
+    height: 40px;
+    min-width: 165px;
+    margin-left: 77px;
+    padding-left: 31px;
+    transition: 1s;
+    flex-direction: row-reverse;
+    cursor: pointer;
+}
+
+.nav_icon_container:hover.agent{
+    min-width: 128px;
+    margin-left: 43px;
+}
+
+.nav_icon_container:hover.records{
+    min-width: 144px;
+    margin-left: 59px;
+}
+
+.nav_icon_container:hover.reports{
+    min-width: 140px;
+    margin-left: 59px;
+}
+
+.nav_icon_container:hover.help{
+    min-width: 140px;
+    margin-left: 59px;
+}
+
+.nav_icon_container:hover.streaming{
+    min-width: 177px;
+    margin-left: 94px;
+}
+
+.nav_icon_container:hover.logout{
+    min-width: 138px;
+    margin-left: 58px;
+}
+
+
+
+.text_nav_icon{
+    margin: 0;
+    font-size: 15px;
+    display: none;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.nav_icon_container:hover .nav_icon{
+    /* change color svg to #b500e2 */
+    filter: brightness(0) saturate(100%) invert(15%) sepia(78%) saturate(7139%) hue-rotate(287deg) brightness(94%) contrast(115%);
+    margin-left: 14px;
+    animation: opacityFrames 1s;
+}
+
+
+/* al dar hover en nav_icon_container tambien cambiar el color de letras de text_nav_icon */
+.nav_icon_container:hover .text_nav_icon{
+    color: #b500e2;
+    display: block;
+    font-size: 15px;
+    animation: opacityFrames 1s;
+}
+
+
+.drawLine{
+    width: 70%;
+    height: 1px;
+    background-color: #fff;
+    margin: 20px auto 0 auto;
+}
+
+.nav_logo{
+    display: none;
+}
+
+
+/************** ( 'NAV BIG' ) **************/
+
+.nav_side_big{
+    background: rgb(120,0,150);
+    background: linear-gradient(197deg, rgba(120,0,150,1) 0%, rgba(254,0,130,1) 100%);
+    animation: navSideBig 1s;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    padding-top: 25px;
+    z-index: 1;
+    position: fixed;
+    width: 200px;
+}
+
+.nav_upper_big{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+}
+
+.nav_avatar_container_big{
+    background-color: #fff;
+    border-radius: 50%;
+    margin-right: 15px;
+
+    animation: opacityFrames 0.5s;
+    height: 80px;
+    width: 80px;
+}
+
+.nav_arrow_icon_big{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-right: 30px;
+    /* animation: rotateArrow 1s; */
+    transition: 1s;
+    transform: rotate(180deg);
+}
+
+.nav_icon_container_big{
+    display: flex;
+    margin-top: 30px;
+    margin-left: 29px;
+}
+
+.text_nav_icon_big{
+    margin-left: 10px;
+    margin-bottom: 0;
+    color: #fff;
+    font-family: 'Noto Sans', sans-serif;
+    animation: opacityFrames 1s;
+}
+
+.text_nav_icon_big:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.nav_logo_big{
+    position: absolute;
+    margin-left: 30px;
+    display: block;
+    animation: opacityFrames 1s;
+    bottom: max(0px, 10px);
+}
+
+.chevron-agent-closed{
+    color: rgb(255, 255, 255);
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+.chevron-agent-opened{
+    margin-left: 50px;
+    color: rgb(255, 255, 255);
+    transition: 1s;
+    transform: rotate(90deg);
+}
+
+.box-chevron-agent-opened{
+    display: inline-block;
+    width: 100%;
+    height: 110px;
+    background-color: #fff;
+    padding-left: 55px;
+    padding-top: 10px;
+}
+
+.box-chevron-agent-closed{
+    display: none;
+}
+
+.submenu-agent{
+    color: #6273c2;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.submenu-agent:hover{
+    text-decoration: underline;
+}
