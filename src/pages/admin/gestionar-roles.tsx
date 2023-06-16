@@ -52,7 +52,7 @@ export default function (){
     ];
 
     return(
-        <div className="flex justify-center vh-100">
+        <div className="flex justify-center vh-100 items-center h-screen auto-cols-max">
             <div>
                 <DataTable
                     columns={columns}
@@ -60,9 +60,17 @@ export default function (){
                     selectRow={true}
                     handleSelectRow={(e)=>console.log(e)} />
             </div>
+
+            <button
+                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    type="submit"
+                >
+                    Iniciar sesión
+                </button>
+
         </div>
     )
 
-
+        
         
 }
