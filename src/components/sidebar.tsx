@@ -6,7 +6,7 @@ import logo from '../images/Escudo-Municipio.png';
 
 const Sidebar = () => {
     // Aquí puedes obtener el rol del usuario desde el contexto o de alguna otra manera
-    const userRole = 'admin';
+    const userRole = 'user';
 
     const menuOptions = [
         { label: 'Gestionar Roles', path: 'gestionar-roles', roles: ['admin'] },
@@ -15,6 +15,10 @@ const Sidebar = () => {
         { label: 'Gestionar Contratos', path: 'gestionar-contratos', roles: ['admin', 'user'] },
         { label: 'Gestionar Históricos', path: 'gestionar-historicos', roles: ['admin', 'user'] }
     ];
+
+    const filteredMenuOptions = menuOptions.filter(
+        (option) => !option.roles || option.roles.includes(userRole)
+    );
 
     const {push}= useRouter()
 
@@ -74,7 +78,7 @@ const Sidebar = () => {
 
             <div className="drawLine"></div>
 
-            {menuOptions.map((option, inx) => (
+            {filteredMenuOptions.map((option, inx) => (
                 <div key={inx} className={ openDrawer ? 'nav_icon_container streaming' : 'nav_icon_container_big' } >
                     {/*<img src={StreamingIcon.src} alt="StreamingIcon" className="nav_icon" />*/}
                     <p
