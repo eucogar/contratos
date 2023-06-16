@@ -16,7 +16,7 @@ const Sidebar = () => {
         { label: 'Gestionar Historicos', path: 'admin/gestionar-historicos', roles: ['admin', 'user'] },
 
         { label: 'Consultar Contratos', path: 'digitador/consultar-contratos', roles: ['digitador', 'user'] },
-        { label: 'Registra Contratos', path: 'digitador/registra-contratos', roles: ['digitador', 'user'] },
+        { label: 'Registra Contratos', path: 'digitador/registrar-contratos', roles: ['digitador', 'user'] },
 
         { label: 'Consulta Historicos', path: 'supervisor/consulta-historicos', roles: ['supervisor', 'user'] },
         { label: 'Consulta Contratos', path: 'supervisor/consulta-contratos', roles: ['supervisor', 'user'] },
