@@ -1,9 +1,19 @@
 import React from 'react';
+import {RUser} from "@/models/RUser";
 
 const RegisterUser = () => {
+
+    const { register, handleSubmit } = useForm<RUser>();
+    const onSubmit: SubmitHandler<RUser> = (data) => {
+        console.dir(data); // Muestra los datos del formulario en la consola
+    };
+
     return (
+        
         <div className="w-full max-w-md mx-auto">
-            <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+                    onSubmit={handleSubmit(onSubmit)}
+            >
                 <div className="mb-4">
                     <label
                         className="block text-gray-700 text-sm font-bold mb-2"
@@ -16,6 +26,7 @@ const RegisterUser = () => {
                         id="identificacion"
                         type="text"
                         placeholder="Identificación"
+                        {...register("ID")}
                     />
                 </div>
                 <div className="mb-4">
@@ -30,6 +41,7 @@ const RegisterUser = () => {
                         id="nombre"
                         type="text"
                         placeholder="Nombre"
+                        {...register("Name")}
                     />
                 </div>
                 <div className="mb-4">
@@ -44,6 +56,7 @@ const RegisterUser = () => {
                         id="apellido"
                         type="text"
                         placeholder="Apellido"
+                        {...register("LastName")}
                     />
                 </div>
                 <div className="mb-4">
@@ -58,6 +71,7 @@ const RegisterUser = () => {
                         id="userName"
                         type="text"
                         placeholder="Usuario"
+                        {...register("UserName")}
                     />
                 </div>
                 <div className="mb-4">
@@ -72,6 +86,7 @@ const RegisterUser = () => {
                         id="email"
                         type="email"
                         placeholder="Correo Electrónico"
+                        {...register("Email")}
                     />
                 </div>
                 <div className="mb-4">
@@ -86,6 +101,7 @@ const RegisterUser = () => {
                         id="password"
                         type="password"
                         placeholder="Contraseña"
+                        {...register("Password")}
                     />
                 </div>
                 <div className="mb-4">
@@ -97,7 +113,7 @@ const RegisterUser = () => {
                     </label>
                     <select
                         className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        id="rol"
+                        id="rol" {...register("Rol")}
                     >
                         <option value="">Seleccione un rol</option>
                         <option value="admin">Administrador</option>
