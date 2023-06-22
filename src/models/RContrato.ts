@@ -2,12 +2,16 @@ export interface RContrato {
     DependencyName: String
     SerieName: String
     SubSerieName: String
-    Asunto: String
+    //Asunto
+    Affair : String
     InitialDate: Int
     FinalDate: Int
-    Estante: String
-    Bandeja: String
+    //Estante
+    Shelf : String
+    //Bandeja
+    Tray : String
     Box: String
-    NoDeOrden: String
+    //Numero de orden
+    NoOrder: String
     Observations: String
 }

@@ -1,6 +1,13 @@
 import React from 'react';
+import {RRol} from "@/models/RRol";
 
 const RegisterRol = () => {
+
+    const { register, handleSubmit } = useForm<RRol>();
+    const onSubmit: SubmitHandler<RRol> = (data) => {
+        console.dir(data); // Muestra los datos del formulario en la consola
+    };
+
     return (
         <div className="w-full max-w-md mx-auto">
             <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
@@ -16,6 +23,7 @@ const RegisterRol = () => {
                         id="Nombre"
                         type="text"
                         placeholder="Nombre"
+                        {...register("Name")}
                     />
                 </div>
 
@@ -31,6 +39,7 @@ const RegisterRol = () => {
                         id="Estado"
                         type="text"
                         placeholder="Estado"
+                        {...register("Estate")}
                     />
                 </div>
 
@@ -46,6 +55,7 @@ const RegisterRol = () => {
                         id="Descripción"
                         rows="4"
                         placeholder="Descripción"
+                        {...register("Description")}
                         ></textarea>
                 </div>
                 
