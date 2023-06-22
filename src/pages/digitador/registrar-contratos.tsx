@@ -1,6 +1,13 @@
 import React from 'react';
+import {RContrato} from "@/models/RContrato";
 
 const Formulario = () => {
+
+    const { register, handleSubmit } = useForm<RContrato>();
+    const onSubmit: SubmitHandler<RContrato> = (data) => {
+        console.dir(data); // Muestra los datos del formulario en la consola
+    };
+
     return (
         <div className="w-full max-w-lg mx-auto">
             <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
@@ -15,6 +22,7 @@ const Formulario = () => {
                         <select
                             className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                             id="dependencia"
+                            {...register("DependencyName")}
                         >
                             {/* Opciones del select */}
                         </select>
@@ -31,6 +39,7 @@ const Formulario = () => {
                             id="serie"
                             type="text"
                             placeholder="Serie"
+                            {...register("SerieName")}
                         />
                     </div>
                 </div>
@@ -45,6 +54,7 @@ const Formulario = () => {
                         <select
                             className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                             id="subserie"
+                            {...register("SubSerieName")}
                         >
                             {/* Opciones del select */}
                         </select>
@@ -61,6 +71,7 @@ const Formulario = () => {
                             id="asunto"
                             type="text"
                             placeholder="Asunto"
+                            {...register("Affair")}
                         />
                     </div>
                 </div>
@@ -77,6 +88,7 @@ const Formulario = () => {
                             id="fecha-inicial"
                             type="date"
                             placeholder="Fecha Inicial"
+                            {...register("InitialDate")}
                         />
                     </div>
                     <div className="w-full md:w-1/2 px-3">
@@ -91,6 +103,7 @@ const Formulario = () => {
                             id="fecha-final"
                             type="date"
                             placeholder="Fecha Final"
+                            {...register("FinalDate")}
                         />
                     </div>
                 </div>
@@ -107,6 +120,7 @@ const Formulario = () => {
                             id="estante"
                             type="text"
                             placeholder="Estante"
+                            {...register("Shelf")}
                         />
                     </div>
                     <div className="w-full md:w-1/2 px-3">
@@ -121,6 +135,7 @@ const Formulario = () => {
                             id="bandeja"
                             type="text"
                             placeholder="Bandeja"
+                            {...register("Tray")}
                         />
                     </div>
                 </div>
@@ -137,6 +152,7 @@ const Formulario = () => {
                             id="caja"
                             type="text"
                             placeholder="Caja"
+                            {...register("Box")}
                         />
                     </div>
                     <div className="w-full md:w-1/2 px-3">
@@ -151,6 +167,7 @@ const Formulario = () => {
                             id="orden"
                             type="text"
                             placeholder="No de Orden"
+                            {...register("NoOrder")}
                         />
                     </div>
                 </div>
@@ -167,6 +184,7 @@ const Formulario = () => {
                             id="observaciones"
                             rows="4"
                             placeholder="Observaciones"
+                            {...register("Observations")}
                         ></textarea>
                     </div>
                 </div>
